@@ -1,0 +1,29 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("discord library")
+
+local serv = win:Server("Preview", "")
+
+local btns = serv:Channel("Main")
+
+MainSection:NewButton("Fly", "makes you Fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
+MainSection:NewButton("crash server", "put a text and spectate and spam the crash buttion", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/prison-life-crasher/main/crasher", true))()
+end)
+
+MainSection:NewButton("flips", "makes you do gymnastics", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/yjxXnxbS'))()
+end)
+
+MainSection:NewToggle("Super-Human", "go superfast and jump rlly high", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
